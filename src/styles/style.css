@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lobster&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* SKIP TO CONTENT */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #FFDA77;
+    color: #FBF6F0;
+    padding: 10px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFA45B;
+    color: #FBF6F0;
+    height: 80px;
+}
+
+.logo-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    font-family: 'Lobster', cursive;
+    margin: 0.5rem;
+}
+
+.brand-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FBF6F0;
+    font-size: 1.5rem;
+}
+
+.brand-logo img {
+    width: 45px;
+    margin: 0.5rem;
+}
+
+.navbar-links {
+    display: none;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #FBF6F0;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #FFDA77;
+}
+
+.toggle-button {
+    border: none;
+    background: none;
+    margin-right: 0.5rem;
+}
+
+.toggle-button img {
+    height: 44px;
+    width: 44px;
+}
+
+.toggle-button img:hover {
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+}
+
+/* JUMBOTRON */
+
+.jumbotron .jumbotron-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-image: url('~../public/images/heros/hero-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 75%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+
+.jumbotron .jumbotron-img h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FBF6F0;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    margin: 5px;
+    padding: 10px;
+}
+
+/* DAFTAR RESTORAN */
+
+.star-checked {
+    color: orange;
+}
+
+.restaurant-list {
+    margin-bottom: 30px;
+}
+
+.restaurant-list h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.restaurant-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 0 1.5rem;
+}
+
+.restaurant-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #FFDA77;
+    box-shadow: 3px 3px 3px 3px #ccc;
+}
+
+.restaurant-item img {
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+}
+
+.restaurant-item__name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.restaurant-item__name .restaurant-name {
+    font-size: 18px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.restaurant-item__name .restaurant-city {
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.restaurant-item__name .restaurant-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0 5px;
+    border-left: 1px solid black;
+    font-size: 14px;
+}
+
+.restaurant-rating .restaurant-rating__numbers {
+    margin-right: 5px;
+}
+
+.restaurant-item__desc {
+    margin: 10px 0;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.restaurant-desc {
+    margin: 0;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.show-restaurant-desc {
+    display: block;
+}
+
+/* SPONSORSHIP */
+
+.sponsorship {
+    background-color: #FFDA77;
+}
+
+.sponsorship h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px;
+    margin-bottom: 0;
+}
+
+.sponsorship__container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    padding-bottom: 20px;
+}
+
+.sponsorship__container img {
+    height: 75px;
+    width: 75px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #FFA45B;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: #FBF6F0;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .toggle-button {
+        top: 1.5rem;
+    }
+
+    .navbar-links {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .navbar-links li a {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .logo-button-container {
+        width: auto;
+    }
+
+    .toggle-button {
+        display: none;
+    }
+    .navbar-links {
+        display: block;
+    }
+
+    .jumbotron .jumbotron-img {
+        height: 300px;
+    }
+
+    .restaurant-item img {
+        height: 250px;
+    }
+
+    .restaurant-container {
+        grid-gap: 30px;
+    }
+
+    .sponsorship__container img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .jumbotron .jumbotron-img {
+        height: 400px;
+    }
+
+    .jumbotron .jumbotron-img h1 {
+        font-size: 26px;
+    }
+
+    .restaurant-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
+
+    .restaurant-list h2 {
+        font-size: 26px;
+        padding: 20px 0;
+    }
+    
+    .restaurant-item__name .restaurant-name {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    .restaurant-item__name .restaurant-city,
+    .restaurant-item__name .restaurant-rating {
+        font-size: 16px;
+    }
+
+    .restaurant-item__desc {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .restaurant-desc {
+        display: block;
+    }
+
+    .sponsorship__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sponsorship h2 {
+        font-size: 26px;
+        padding: 30px 0;
+    }
+
+    .sponsorship__container img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav,
+    .restaurant-container,
+    .sponsorship__container {
+        padding: 0 10%;
+    }
+
+    .sponsorship__container {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .restaurant-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .sponsorship__container img {
+        width: 150px;
+        height: 150px;
+    }
+}
