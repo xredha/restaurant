@@ -1,0 +1,267 @@
+@media screen and (max-width: 499px) {
+  .toggle-button {
+    top: 1.5rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  nav li a {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .logo-and-button-container {
+    width: auto;
+  }
+
+  .logo-and-button-container .toggle-button {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  .jumbotron .jumbotron__image {
+    height: 300px;
+  }
+
+  .restaurant__container {
+    gap: 30px;
+  }
+
+  .sponsorship__container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .like {
+    font-size: 20px;
+    bottom: 18px;
+    right: 18px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .restaurant__container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+
+  .sponsorship__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .restaurant__component img {
+    height: 282px;
+  }
+
+  .detail-restaurant {
+    padding: 0 2rem;
+  }
+
+  .detail-restaurant .detail-restaurant__container {
+    grid-template-columns: 40% 60%;
+  }
+
+  .detail-restaurant__container img {
+    height: auto;
+    max-height: 450px;
+    border-radius: 15px 0 0 0;
+  }
+
+  .detail-restaurant__container .detail-restaurant__content {
+    padding-top: 0;
+  }
+
+  .detail-restaurant__container .detail-restaurant__desc,
+  .detail-restaurant__container .detail-restaurant__review {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .detail-restaurant__review .detail-restaurant__review__persons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .jumbotron .jumbotron__image {
+    height: 400px;
+  }
+
+  .jumbotron .jumbotron__image h1 {
+    font-size: 26px;
+  }
+
+  .restaurant h2 {
+    font-size: 26px;
+    padding: 20px 0;
+  }
+
+  .restaurant__component img {
+    height: 300px;
+  }
+
+  .restaurant__component .restaurant__component__anchor {
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .restaurant__component .restaurant__component__header .restaurant__component__header__name {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .restaurant__component .restaurant__component__header .restaurant__component__header__city,
+  .restaurant__component .restaurant__component__header .restaurant__component__header__rating {
+    font-size: 16px;
+  }
+
+  .restaurant__component__desc p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  
+  .sponsorship h2 {
+    font-size: 26px;
+    padding: 30px 0;
+  }
+
+  .sponsorship__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sponsorship__container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  header,
+  .jumbotron .jumbotron__image h1,
+  .restaurant__container,
+  .sponsorship__container {
+    padding: 0 10%;
+  }
+
+  .detail-restaurant h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 30px;
+  }
+
+  .detail-restaurant .detail-restaurant__container,
+  .detail-restaurant__form {
+    margin: 0 10%;
+  }
+
+  .detail-restaurant__container .detail-restaurant__desc {
+    padding: 0 25px;
+  }
+
+  .detail-restaurant__container .detail-restaurant__content h3,
+  .detail-restaurant__container .detail-restaurant__desc h3,
+  .detail-restaurant__container .detail-restaurant__review h3 {
+    font-size: 20px;
+  }
+
+  .detail-restaurant__review .detail-restaurant__review__persons h4 {
+    font-size: 18px;
+  }
+  
+  .detail-restaurant__container .detail-restaurant__content p,
+  .detail-restaurant__container .detail-restaurant__desc p,
+  .detail-restaurant__content__menu ul {
+    font-size: 16px;
+  }
+
+  .detail-restaurant__form form {
+    margin: 0 5%;
+  }
+
+  .detail-restaurant__form form label {
+    font-size: 20px;
+  }
+
+  .like {
+    font-size: 26px;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .restaurant__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sponsorship__container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .detail-restaurant__review .detail-restaurant__review__persons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .detail-restaurant__form form {
+    margin: 0 10%;
+  }
+
+  .like {
+    font-size: 30px;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .restaurant__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sponsorship__container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .detail-restaurant__review .detail-restaurant__review__persons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .like {
+    font-size: 50px;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+  }
+}
