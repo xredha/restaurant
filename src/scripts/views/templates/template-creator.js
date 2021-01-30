@@ -3,7 +3,7 @@ import * as func from './fraction-creator.js';
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant__component">
-    <img src="${API_ENDPOINT.IMAGE.MEDIUM(restaurant.pictureId)}" alt="Gambar Restaurant ${restaurant.name}" tabindex="0">
+    <img class="lazyload" src="${API_ENDPOINT.IMAGE.MEDIUM(restaurant.pictureId)}" alt="Gambar Restaurant ${restaurant.name}" tabindex="0">
     <div class="restaurant__component__header">
       <p class="restaurant__component__header__name" tabindex="0">${restaurant.name}</p>
       <p class="restaurant__component__header__city" tabindex="0">${restaurant.city}</p>
@@ -24,7 +24,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 tabindex="0">Detail Restaurant</h2>
   <div class="detail-restaurant__container">
-    <img src="${API_ENDPOINT.IMAGE.LARGE(restaurant.pictureId)}" alt="Gambar Restaurant ${restaurant.name}" tabindex="0">
+    <img class="lazyload" src="${API_ENDPOINT.IMAGE.LARGE(restaurant.pictureId)}" alt="Gambar Restaurant ${restaurant.name}" tabindex="0">
     <div class="detail-restaurant__content">
       <h3 tabindex="0">Nama : </h3>
       <p tabindex="0">${restaurant.name}</p>

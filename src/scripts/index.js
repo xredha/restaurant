@@ -6,6 +6,8 @@ import './views/templates/components/footer.js';
 import './views/templates/components/loading.js';
 import App from './views/app.js';
 import swRegister from './utils/sw-register.js';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const app = new App({
   button: document.querySelector('.toggle-button'),

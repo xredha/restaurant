@@ -5,7 +5,7 @@ class ErrorPage extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="error-page">
+      <div class="error-page" id="error-page">
         <h2>Halaman Gagal Dimuat, Silahkan Cek Koneksi Internet Anda.</h2>
       </div>
     `;

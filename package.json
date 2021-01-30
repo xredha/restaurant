@@ -4,10 +4,15 @@
   "description": "App",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "jumbotron-image-compress": "node sharp.js",
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "test-build": "http-server ./dist",
-    "test": "karma start"
+    "open-build": "http-server ./dist -o",
+    "test-dev": "npm run jumbotron-image-compress & npm run dev",
+    "test-build": "npm run jumbotron-image-compress & npm run build & npm run open-build",
+    "test": "karma start",
+    "e2e": "codeceptjs run --steps",
+    "e2e-fast": "codeceptjs run"
   },
   "keywords": [],
   "author": "https://github.com/xredha",
@@ -17,6 +22,7 @@
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "codeceptjs": "^3.0.4",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
     "eslint": "^7.16.0",
@@ -24,6 +30,8 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",
     "karma": "^5.1.0",
@@ -32,8 +40,11 @@
     "karma-jasmine": "^3.3.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
+    "puppeteer": "^5.5.0",
+    "sharp": "^0.27.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9",
@@ -44,6 +55,7 @@
   },
   "dependencies": {
     "idb": "^5.0.8",
+    "lazysizes": "^5.3.0",
     "regenerator-runtime": "^0.13.5"
   }
 }

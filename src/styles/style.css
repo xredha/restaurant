@@ -120,7 +120,7 @@ nav li:hover {
   justify-content: center;
   align-items: center;
   height: 250px;
-  background-image: url('../public/images/heros/hero-image.jpg');
+  background-image: url('../public/images/heros-compress/hero-image-large.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

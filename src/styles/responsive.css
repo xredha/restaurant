@@ -29,6 +29,10 @@
   nav li a {
     width: 100%;
   }
+
+  .jumbotron .jumbotron__image {
+    background-image: url('../public/images/heros-compress/hero-image-small.jpg');
+  }
 }
 
 @media screen and (min-width: 500px) {

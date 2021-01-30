@@ -1,7 +1,7 @@
 import RestaurantSource from '../../data/restaurant-source.js';
 import UrlParser from '../../routes/url-parser.js';
 import {createRestaurantDetailTemplate} from '../templates/template-creator.js';
-import LikeButtonInitiator from '../../utils/like-button-initiator.js';
+import LikeButtonPresenter from '../../utils/like-button-presenter.js';
 
 const Detail = {
   async render() {
@@ -16,7 +16,7 @@ const Detail = {
     const detailRestaurant = document.querySelector('.detail-restaurant');
     detailRestaurant.innerHTML = createRestaurantDetailTemplate(restaurant);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
         id: restaurant.id,
@@ -45,6 +45,7 @@ const Detail = {
         review: reviewInput,
       };
       RestaurantSource.postCustomerReviews(dataInput);
+      alert('Terimakasih Atas Masukan Anda 😊');
     });
   },
 };
